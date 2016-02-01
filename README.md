@@ -2,7 +2,7 @@
 
 Flicks is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: 4 hours spent in total
+Time spent: 8 hours spent in total
 
 ## User Stories
 
@@ -23,13 +23,13 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/VdK0hdZ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/a6BLfVN.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-I still had a lot of trouble pushing the app to github since I'm not that familiar with it yet.
+There were some parts of the assignment where I had an idea what had to to be done but I wasn't exactly sure how to do it. I still had a lot of trouble pushing the app to github since I'm not too familiar with it yet.
 
 ## License
 
