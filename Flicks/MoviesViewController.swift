@@ -15,12 +15,18 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     var movies: [NSDictionary]?
+    var endpoint: String!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        /*if let navigationBar = navigationController?.navigationBar {
+            navigationBar.backgroundColor = UIColor.blackColor()
+        }*/
         
         // Initialize a UIRefreshControl
         let refreshControl = UIRefreshControl()
@@ -54,6 +60,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
+        cell.selectionStyle = .None
         
         let baseUrl = "http://image.tmdb.org/t/p/w500"
         
@@ -62,6 +69,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let imageUrl = NSURL(string: baseUrl + posterPath)
         cell.posterView.setImageWithURL(imageUrl!)
         }
+        
         
         print("row \(indexPath.row)")
         return cell
@@ -72,7 +80,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         // ... Create the NSURLRequest (myRequest) ...
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = NSURL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
+        let url = NSURL(string: "https://api.themoviedb.org/3/movie/\(endpoint)?api_key=\(apiKey)")
         let request = NSURLRequest(
             URL: url!,
             cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData,
